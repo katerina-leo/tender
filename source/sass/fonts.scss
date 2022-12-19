@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  // src: url("../fonts/ptsans.woff2") format("woff2"),
+  src: url("../fonts/Montserrat.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  // src: url("../fonts/ptsansbold.woff2") format("woff2"),
+  src: url("../fonts/Montserratbold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  // src: url("../fonts/ptsansbold.woff2") format("woff2"),
+  src: url("../fonts/PlayfairDisplayItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}

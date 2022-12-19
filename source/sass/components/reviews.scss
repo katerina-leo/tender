@@ -1,0 +1,10 @@
+.reviews {
+  padding: 35px 30px;
+}
+
+.reviews__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+  padding-top: 20px;
+}
