@@ -1,0 +1,44 @@
+.advantage {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.advantage__item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+
+  &::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+  }
+
+  &--manager::before {
+    background-image: url("../img/manager.svg");
+  }
+
+  &--time::before {
+    background-image: url("../img/time.svg");
+  }
+
+  &--everywhere::before {
+    background-image: url("../img/everywhere.svg");
+  }
+
+  &--guarantee::before {
+    background-image: url("../img/guarantee.svg");
+  }
+
+  &--conditions::before {
+    background-image: url("../img/conditions.svg");
+  }
+
+  &--price::before {
+    background-image: url("../img/price.svg");
+  }
+}
