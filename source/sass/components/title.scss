@@ -1,0 +1,23 @@
+.title {
+  min-height: 180px;
+  background-image: url("../../img/title.jpg");
+}
+
+.title__title {
+  color: #ffffff;
+  font-family: "Cormorant+SC", serif;
+  font-weight: 500;
+  font-size: 60px;
+  padding: 50px;
+  text-transform: uppercase;
+}
+
+.title__title-span {
+  font-size: 80px;
+}
+
+.title__desc {
+  color: #ffffff;
+  padding-left: 50px;
+  font-size: 20px;
+}

@@ -11,6 +11,9 @@
   <link rel="preload" href="fonts/Montserrat.woff" as="font">
   <link rel="preload" href="fonts/Montserratbold.woff" as="font">
   <link rel="preload" href="fonts/PlayfairDisplayItalic.woff" as="font">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="dist/css/lightbox.css">
   <!-- Yandex.Metrika counter -->
@@ -42,7 +45,7 @@
     <header class="page-header container">
         <nav class="page-header__nav main-nav container main-nav--closed">
           <a class="page-header__logo main-nav__logo" href="index.html">
-            <img class="page-header__img" src="img/logo.jpg" href="#" width="120" height="50" alt="Логотип сайта">
+            <img class="page-header__img" src="img/logo.svg" href="#" width="90" height="90" alt="Логотип сайта">
           </a>
           <button class="page-header__toggle main-nav__toggle main-nav__toggle--close" type="button">
             <span class="visually-hidden">Открыть меню</span>
@@ -55,24 +58,27 @@
               <a class="main-nav__link main-nav__link" href="#">Тарифы</a>
               <ul class="main-nav__list-2">
                 <li class="main-nav__item-2">
-                  <a href="antaliya.html" class="main-nav__link main-nav__link-2">Стартовый</a>
+                  <a href="" class="main-nav__link main-nav__link-2">Стартовый</a>
                 </li>
                 <li class="main-nav__item-2">
-                  <a href="kemer.html" class="main-nav__link main-nav__link-2">Базовый</a>
+                  <a href="" class="main-nav__link main-nav__link-2">Базовый</a>
                 </li>
                 <li class="main-nav__item-2">
-                  <a href="belek.html" class="main-nav__link main-nav__link-2">Расширенный</a>
+                  <a href="" class="main-nav__link main-nav__link-2">Расширенный</a>
                 </li>
                 <li class="main-nav__item-2">
-                  <a href="alania.html" class="main-nav__link main-nav__link-2">Стандартный</a>
+                  <a href="" class="main-nav__link main-nav__link-2">Стандартный</a>
                 </li>
                 <li class="main-nav__item-2">
-                  <a href="side.html" class="main-nav__link main-nav__link-2">Свободный</a>
+                  <a href="" class="main-nav__link main-nav__link-2">Свободный</a>
                 </li>
                 <li class="main-nav__item-2">
-                  <a href="marmaris.html" class="main-nav__link main-nav__link-2">Поиск закупок</a>
+                  <a href="" class="main-nav__link main-nav__link-2">Поиск закупок</a>
                 </li>
               </ul>
+            </li>
+            <li class="main-nav__item">
+                          <a class="main-nav__link" href="#services"><span></span>Услуги</a>
             </li>
             <!-- <li class="main-nav__item">
               <a class="main-nav__link" href="email"><span></span>tender@mail.ru</a>
@@ -88,8 +94,14 @@
         </nav>
     </header>
     <main class="page-main">
-      <section class="page-main__tarif tariff">
+      <section class="page-main__title title">
         <div class="container">
+          <h2 class="title__title"><span class="title__title-span">R</span>ite <span class="title__title-span">T</span>ender</h2>
+          <p class="title__desc">Тендерное сопровождение</p>
+        </div>
+      </section>
+      <section class="page-main__tarif tariff container">
+        <!-- <div class="container"> -->
           <h2 class="tariff__title">Тарифы</h2>
 
           <ul class="page-main__list tariff__list">
@@ -157,8 +169,75 @@
           </ul>
         </div>
       </section>
-      <section class="page-main__reviews reviews">
-        <div class="reviews__container container">
+      <section id="services" class="page-main__services services container">
+        <!-- <div class="services__container container"> -->
+          <h2 class="services__title">Наши услуги</h2>
+
+          <ul class="page-main__list services__list">
+            <li class="services__item">
+              <p class="services__desc">Аккредитация на портале ЕИС с аккредитацией на 8 федеральных площадках</p>
+              <p class="services__price">1500<span> рублей</span>
+              </p>
+            </li>
+            <li class="services__item">
+              <p class="services__desc">Аккредитация на портале ЕИС с аккредитацией на 8 федеральных площадках + удаленная настройка рабочего места</p>
+              <p class="services__price">2000<span> рублей</span>
+              </p>
+            </li>
+            <li class="services__item">
+              <p class="services__desc">Подача закрывающих документов (электронное актирование)</p>
+              <p class="services__price">200<span> рублей</span>
+              </p>
+            </li>
+            <li class="services__item">
+              <p class="services__desc">Аккредитация на торговой площадке в секции 223 ФЗ</p>
+              <p class="services__price">500<span> рублей</span>
+              </p>
+            </li>
+            <li class="services__item">
+              <p class="services__desc">Аккредитация на коммерческой торговой площадке</p>
+              <p class="services__price">500<span> рублей</span>
+              </p>
+            </li>
+            <li class="services__item">
+              <p class="services__desc">Удаленная настройка рабочего места</p>
+              <p class="services__price">1000<span> рублей</span>
+              </p>
+            </li>
+            <li class="services__item">
+              <p class="services__desc">Аналитика ранее проведенных процедур по заданной тематике</p>
+              <p class="services__price">2000<span> рублей</span>
+              </p>
+            </li>
+            <li class="services__item">
+              <p class="services__desc">Подготовка, оформление и подача документов необходимых в составе заявки по 44 ФЗ</p>
+              <p class="services__price">1000*<span> рублей</span>
+              </p>
+            </li>
+            <li class="services__item">
+              <p class="services__desc">Подготовка, оформление и подача документов необходимых в составе заявки по 223 ФЗ</p>
+              <p class="services__price">3000*<span> рублей</span>
+              </p>
+            </li>
+            <li class="services__item">
+              <p class="services__desc">Подготовка и подача документов необходимых для участия в Коммерческой закупке</p>
+              <p class="services__price">2500<span> рублей</span>
+              </p>
+            </li>
+            <li class="services__item">
+              <p class="services__desc">Комплексный анализ ниши + подборка текущих актуальных тендеров</p>
+              <p class="services__price">1500<span> рублей</span>
+              </p>
+            </li>
+
+          </ul>
+          <div class="services__image">
+            <img src="img/services.jpg" alt="" >
+          </div>
+        </div>
+      </section>
+      <section class="page-main__reviews reviews container">
+        <!-- <div class="reviews__container container"> -->
           <h2 class="tariff__title">Отзывы клиентов</h2>
 
           <ul class="page-main__list reviews__list">
