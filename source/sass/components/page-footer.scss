@@ -1,31 +1,23 @@
 .page-footer {
-  width: 100%;
-  margin-top: 0;
   background-color: $white;
-
-
-  @media (min-width: $tablet-width) {
-    // height: 550px;
-  }
-
-  @media (min-width: $desktop-width) {
-    // height: 850px;
-  }
 }
 
-.page-footer__wrapper {
-
+.page-footer__container {
+  padding: 35px 10px;
   min-height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  gap: 20px;
 
   @media (min-width: $tablet-width) {
-
-    padding: 20px 30px;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+  }
+
+  @media (min-width: $laptop-width) {
+    padding: 35px 30px 10px;
   }
 }
 
@@ -39,12 +31,8 @@
 }
 
 .page-footer__list {
-  margin: 0;
-  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  padding: 0;
-  list-style: none;
   align-items: start;
 }
 

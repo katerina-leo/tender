@@ -1,12 +1,27 @@
-.tariff {
-  padding: 35px 30px;
+.tariff__container {
+  padding: 35px 10px;
+
+  @media (min-width: $tablet-width) {
+    padding: 10px;
+  }
+
+  @media (min-width: $laptop-width) {
+    padding: 35px 30px 10px;
+  }
 }
 
 .tariff__list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
   padding-top: 20px;
+
+  @media (min-width: $mobile-width-only) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $laptop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .tariff__item {
@@ -20,6 +35,7 @@
 }
 
 .tariff__items {
+  padding-left: 15px;
   list-style-type: disc;
 }
 

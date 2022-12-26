@@ -1,9 +1,21 @@
 .about-us {
-  padding: 35px 30px;
+  background-color: $white;
+}
+
+.about-us__container {
+  padding: 35px 10px;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr;
   gap: 20px;
-  background-color: #ffffff;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: min-content 1fr;
+  }
+
+  @media (min-width: $laptop-width) {
+    padding: 35px 30px 10px;
+  }
 }
 
 .about-us__title {

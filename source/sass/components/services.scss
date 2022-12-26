@@ -1,9 +1,19 @@
-.services {
-  padding: 35px 30px;
+
+.services__container {
+  padding: 35px 10px;
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: min-content 1fr;
+  grid-template-columns: 1fr;
   gap: 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 10px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: min-content 1fr;
+  }
+
+  @media (min-width: $laptop-width) {
+    padding: 35px 30px 10px;
+  }
 }
 
 .services__list {
@@ -12,14 +22,19 @@
 }
 
 .services__item {
-  padding: 15px 30px 15px;
+  padding: 10px;
   box-shadow: 0 0 10px rgba(174, 174, 182, 0.5);
   border-radius: 5px;
   background: #ffffff;
   display: grid;
-  grid-template-columns: 1fr 120px;
+  grid-template-columns: 1fr;
   gap: 10px;
   min-height: 50px;
+
+  @media (min-width: $mobile-width-only) {
+    padding: 15px 30px 15px;
+    grid-template-columns: 1fr 120px;
+  }
 }
 
 .services__title {
@@ -27,12 +42,17 @@
 }
 
 .services__image {
-  padding: 0 5px;
-  grid-area: 2 / 2 / -1 / -1;
+  // padding: 0 5px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: 2 / 2 / -1 / -1;
+  }
 }
 
 .services__price {
   font-size: 18px;
   font-weight: 700;
   color: #1e5a32;
+  align-self: flex-end;
+  justify-self: end;
 }

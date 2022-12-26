@@ -1,40 +1,58 @@
 .main-nav {
   // position: relative;
   width: 100%;
-
   z-index: 100;
   background-color: $white;
+  display: grid;
+  gap: 10px;
+  padding: 10px;
 
-  @media (min-width: $tablet-width) {
 
+  @media (min-width: $mobile-width-only) {
     width: 100%;
     padding: 10px;
-    box-sizing: border-box;
-    height: 100px;
+    min-height: 100px;
     display: grid;
     grid-template-columns: auto 1fr;
-    column-gap: 40px;
-    align-content: center;
+    grid-template-rows: 1fr auto;
+    align-self: end;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    padding: 10px;
+    min-height: 100px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+  }
+
+  @media (min-width: $laptop-width) {
+    padding: 10px 30px 10px;
   }
 }
 
+.main-nav__logo {
+  width: 90px;
+  height: 90px;
+  align-self: center;
+}
+
 .main-nav__list {
-  // position: fixed;
-  list-style: none;
   background-color: $bg-color;
   align-items: center;
-  padding: 0;
-  margin: 0;
+  // padding: 0;
+  // margin: 0;
   color: $white;
   font-size: 18px;
   line-height: 22.7px;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $mobile-width-only) {
     justify-self: end;
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
     background-color: $white;
+    gap: 10px;
 
     &::after {
       display: none;
@@ -43,7 +61,7 @@
 }
 
 .main-nav__toggle {
-  @media (max-width: $mobile-width-only) {
+  @media (max-width: $mini) {
     position: absolute;
     width: 23px;
     height: 23px;
@@ -54,12 +72,12 @@
     z-index: 3;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $mobile-width-only) {
     display: none;
   }
 }
 
-@media (max-width: $mobile-width-only) {
+@media (max-width: $mini) {
   .main-nav--closed {
     .main-nav__list {
       display: none;
@@ -79,10 +97,9 @@
   }
 
   .main-nav--opened {
-    position: absolute;
-    // position: fixed;
-    top: 0;
-    z-index: 1;
+    // position: absolute;
+    // top: 0;
+    // z-index: 1;
   }
 
   .main-nav--opened .main-nav__logo {
@@ -113,30 +130,15 @@
 }
 
 .main-nav__item {
-  list-style: none;
   position: relative;
   padding: 10px;
   text-align: center;
   box-shadow: 0 0 10px rgba(174, 174, 182, 0.5);
   background-color: #f9f9f9;
   border-radius: 5px;
-  margin-right: 20px;
+  // margin-right: 20px;
 
-  &--contacts {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-    box-shadow: 0 0 0;
-    background-color: #ffffff;
-    margin-left: 30px;
-  }
-
-  &--contacts .main-nav__link {
-    padding: 0;
-  }
-
-  @media (max-width: $mobile-width-only) {
+  @media (max-width: $mini) {
     border-top: 1px solid rgba($white, 0.2);
     border-bottom: 1px solid rgba($black, 0.2);
 
@@ -152,10 +154,9 @@
 }
 
 .main-nav__item:last-child {
-  @media (min-width: $tablet-width) {
-    // padding-right: 0;
-    margin-right: 0;
-  }
+  // @media (min-width: $mobile-width-only) {
+  //   margin-right: 0;
+  // }
 
   &::after {
     content: "";
@@ -171,7 +172,7 @@
       rgba($black, 0.2) 100%
     );
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $mobile-width-only) {
       display: none;
     }
   }
@@ -179,16 +180,22 @@
 
 .main-nav__link {
   padding: 10px;
-  color: $white;
+  color: $black;
   text-transform: uppercase;
 
   &--phone {
     font-size: 20px;
     font-weight: 700;
     padding-bottom: 15px;
+    // padding-right: 0;
   }
 
-  @media (min-width: $tablet-width) {
+  &--email {
+    text-transform: none;
+    // padding-right: 0;
+  }
+
+  @media (min-width: $mobile-width-only) {
     color: $black;
     text-transform: none;
   }
@@ -215,7 +222,7 @@
   display: none;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $mobile-width-only) {
     position: absolute;
     width: 200px;
     top: 35px;
@@ -246,7 +253,26 @@
 .main-nav__list li:hover .main-nav__list-2 {
   display: block;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $mobile-width-only) {
     display: block;
+  }
+}
+
+.main-nav__contacts {
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-end;
+  gap: 5px;
+  border-radius: 0;
+
+
+  @media (min-width: $mobile-width-only) {
+    align-self: flex-end;
+    grid-area: 2 / 2 / -1 / -1;
+  }
+
+  @media (min-width: 768px) {
+    grid-area: auto;
+    align-self: center;
   }
 }

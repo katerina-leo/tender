@@ -16,6 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="dist/css/lightbox.css">
+  <script type="module" src="js/index.js"></script>
   <!-- Yandex.Metrika counter -->
   <!-- <script type="text/javascript">
     (function (m, e, t, r, i, k, a) {
@@ -41,13 +42,13 @@
 </head>
 
 <body class="page__body">
-  <!-- <div class="container"> -->
-    <header class="page-header container">
+
+    <header class="page-header">
         <nav class="page-header__nav main-nav container main-nav--closed">
-          <a class="page-header__logo main-nav__logo" href="index.html">
-            <img class="page-header__img" src="img/logo.svg" href="#" width="90" height="90" alt="Логотип сайта">
+          <a class="main-nav__logo" href="index.html">
+            <img class="main-nav__img" src="img/logo.svg" href="#" width="90" height="90" alt="Логотип RiteTender">
           </a>
-          <button class="page-header__toggle main-nav__toggle main-nav__toggle--close" type="button">
+          <button class="main-nav__toggle main-nav__toggle--close" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <ul class="main-nav__list">
@@ -56,7 +57,7 @@
             </li>
             <li class="main-nav__item">
               <a class="main-nav__link main-nav__link" href="#">Тарифы</a>
-              <ul class="main-nav__list-2">
+              <!-- <ul class="main-nav__list-2">
                 <li class="main-nav__item-2">
                   <a href="" class="main-nav__link main-nav__link-2">Стартовый</a>
                 </li>
@@ -75,36 +76,45 @@
                 <li class="main-nav__item-2">
                   <a href="" class="main-nav__link main-nav__link-2">Поиск закупок</a>
                 </li>
-              </ul>
+              </ul> -->
             </li>
             <li class="main-nav__item">
-                          <a class="main-nav__link" href="#services"><span></span>Разовые услуги</a>
+              <a class="main-nav__link" href="#services"><span></span>Разовые услуги</a>
             </li>
+
 
             <!-- <li class="main-nav__item main-nav__item--contacts">
               <a class="main-nav__link main-nav__link--phone" href="tel:+79278425940"><span></span>+7 (927)-842-59-40</a>
               <a class="main-nav__link" href="mailto:RiteTender@yandex.ru"><span></span>RiteTender@yandex.ru</a>
 
             </li> -->
-            <li class="main-nav__item main-nav__item--contacts">
+            <!-- <li class="main-nav__item main-nav__item--contacts">
               <a class="main-nav__link main-nav__link--phone" href="tel:+79278425940"><span></span>+7 (927)-842-59-40</a>
               <a class="main-nav__link" href="mailto:RiteTender@yandex.ru"><span></span>RiteTender@yandex.ru</a>
 
+            </li> -->
+
+          </ul>
+          <ul class="main-nav__contacts">
+            <li>
+              <a class="main-nav__link main-nav__link--phone" href="tel:+79278425940"><span></span>+7 (927)-842-59-40</a>
+            </li>
+            <li>
+              <a class="main-nav__link main-nav__link--email" href="mailto:RiteTender@yandex.ru"><span></span>RiteTender@yandex.ru</a>
             </li>
 
           </ul>
-
         </nav>
     </header>
     <main class="page-main">
       <section class="page-main__title title">
-        <div class="container">
+        <div class="title__container container">
           <h2 class="title__title"><span class="title__title-span">R</span>ite <span class="title__title-span">T</span>ender</h2>
           <p class="title__desc">Тендерное сопровождение</p>
         </div>
       </section>
-      <section class="page-main__tarif tariff container">
-        <!-- <div class="container"> -->
+      <section class="page-main__tarif tariff">
+        <div class="tariff__container container">
           <h2 class="tariff__title">Тарифы</h2>
 
           <ul class="page-main__list tariff__list">
@@ -172,8 +182,8 @@
           </ul>
         </div>
       </section>
-      <section id="services" class="page-main__services services container">
-        <!-- <div class="services__container container"> -->
+      <section id="services" class="page-main__services services">
+        <div class="services__container container">
           <h2 class="services__title">Разовые услуги</h2>
 
           <ul class="page-main__list services__list">
@@ -239,24 +249,26 @@
           </div>
         </div>
       </section>
-      <section id="about-us" class="page-main__about-us about-us container">
-        <h2 class="about-us__title">О нас</h2>
-        <div class="about-us__wrap decor">
-          <p class="decor__start">более</p>
-          <p class="decor__count">12</p>
-          <p class="decor__end">лет успешной работы</p>
+      <section id="about-us" class="page-main__about-us about-us">
+        <div class="about-us__container container">
+          <h2 class="about-us__title">О нас</h2>
+          <div class="about-us__wrap decor">
+            <p class="decor__start">более</p>
+            <p class="decor__count">12</p>
+            <p class="decor__end">лет успешной работы</p>
+          </div>
+          <ul class="about-us__advantage advantage">
+            <li class="advantage__item advantage__item--time">Короткие сроки</li>
+            <li class="advantage__item advantage__item--everywhere">Работа со всеми регионами России</li>
+            <li class="advantage__item advantage__item--conditions">Выгодные условия</li>
+            <li class="advantage__item advantage__item--price">Доступные цены</li>
+            <li class="advantage__item advantage__item--guarantee">Гарантия и надежность качества выполняемых работ</li>
+            <li class="advantage__item advantage__item--manager">Персональный менеджер</li>
+          </ul>
         </div>
-        <ul class="about-us__advantage advantage">
-          <li class="advantage__item advantage__item--time">Короткие сроки</li>
-          <li class="advantage__item advantage__item--everywhere">Работа со всеми регионами России</li>
-          <li class="advantage__item advantage__item--conditions">Выгодные условия</li>
-          <li class="advantage__item advantage__item--price">Доступные цены</li>
-          <li class="advantage__item advantage__item--guarantee">Гарантия и надежность качества выполняемых работ</li>
-          <li class="advantage__item advantage__item--manager">Персональный менеджер</li>
-        </ul>
       </section>
-      <section class="page-main__reviews reviews container">
-        <!-- <div class="reviews__container container"> -->
+      <section class="page-main__reviews reviews">
+        <div class="reviews__container container">
           <h2 class="tariff__title">Отзывы клиентов</h2>
 
           <ul class="page-main__list reviews__list">
@@ -276,11 +288,55 @@
         </div>
       </section>
     </main>
+
+    <!-- <div class="modal modal--sign-up">
+      <div class="modal__body">
+        <h3 class="modal__title">Оформить заявку</h3>
+        <form action="" class="form form--sign-up">
+          <fieldset class="form__fieldset form__fieldset--user">
+            <label class="form__label">
+
+              <span class="form__text">Имя</span>
+
+              <input class="form__input" name="name" type="text">
+            </label>
+            <label class="form__label">
+              <span class="form__text">Фамилия</span>
+              <input class="form__input" name="surname" type="text">
+            </label>
+            <label class="form__label">
+              <span class="form__text">Телефон</span>
+              <input class="form__input" name="phone" type="text">
+            </label>
+            <label class="form__label">
+              <span class="form__text">E-mail</span>
+              <input class="form__input" name="email" type="email">
+            </label>
+
+          </fieldset>
+
+          <div class="form__wrapper-btn">
+
+            <button class="form__submit form__submit--sign-up">
+              Отправить
+            </button>
+          </div>
+        </form>
+
+        <button class="modal__close">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.75 5.25L5.25 18.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M18.75 18.75L5.25 5.25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+    </div> -->
     <footer class="page-footer">
-      <div class="page-footer__wrapper container">
+      <div class="page-footer__container container">
         <ul class="page-footer__list">
           <li class="page-footer__item page-footer__item--site">
-            © tender.ru, 2021-2022
+            © tender.ru, 2022
           </li>
         </ul>
         <ul class="page-footer__list">
@@ -293,9 +349,7 @@
         </ul>
       </div>
     </footer>
-  </div>
-  <script src="js/script.js"></script>
-  <script src="dist/js/lightbox-plus-jquery.js"></script>
+
 </body>
 
 </html>
