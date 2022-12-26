@@ -8,29 +8,8 @@
     //   gap: 8px;
     // }
 
-    &--user,
-    &--service {
+    &--user {
       margin-bottom: 46px;
-
-      // @include mobile {
-      //   margin-bottom: 32px;
-      // }
-    }
-
-    &--passwords {
-      margin-bottom: 36px;
-
-      // @include mobile {
-      //   margin-bottom: 32px;
-      // }
-    }
-
-    &--add-review {
-      margin-bottom: 32px;
-    }
-
-    &--sign-in {
-      margin-bottom: 32px;
     }
   }
 
@@ -59,76 +38,11 @@
     color: $black;
   }
 
-  &__select {
-    width: 100%;
-    height: 46px;
-    background-color: $white;
-    border-radius: 8px;
-    border: none;
-    padding: 10px 14px;
-  }
-
-  &__select--price {
-    min-width: 105px;
-  }
-
-  &__wrapper-price {
-    display: flex;
-    gap: 5px;
-  }
-
-  &__textarea {
-    width: 100%;
-    height: 46px;
-    background-color: $white;
-    border-radius: 8px;
-    border: none;
-    padding: 10px 14px;
-    min-height: 80px;
-  }
-
-  &__password {
-    position: relative;
-  }
-
-  &__password-eye {
-    display: block;
-    width: 24px;
-    height: 24px;
-    position: absolute;
-    top: 50%;
-    right: 14px;
-    transform: translateY(-50%);
-    background-image: url("img/eye-hide.svg");
-    cursor: pointer;
-
-    &--show {
-      background-image: url("img/eye-show.svg");
-    }
-  }
-
-  &__wrapper-add-review {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 16px 24px;
-
-    // @include mobile {
-    //   flex-direction: column;
-    //   align-items: flex-end;
-    // }
-  }
-
-  // &__raiting {
-  //   @include mobile {
-  //     order: 1;
-  //   }
-  // }
-
   &__wrapper-btn {
-    min-height: 114px;
+    min-height: 60px;
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
+    align-items: center;
 
     // @include mobile {
     //   flex-direction: column;
@@ -148,12 +62,8 @@
     //   font-size: 14px;
     // }
 
-    // &--sign-up {
-    //   align-self: flex-end;
-    // }
-
-    // &--sign-in {
-    //   margin-left: auto;
-    // }
+    &--request {
+      align-self: flex-end;
+    }
   }
 }

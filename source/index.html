@@ -15,7 +15,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="dist/css/lightbox.css">
   <script type="module" src="js/index.js"></script>
   <!-- Yandex.Metrika counter -->
   <!-- <script type="text/javascript">
@@ -136,7 +135,7 @@
               <div class="tariff__wrap">
                 <p class="tariff__price">35 900<span> руб/мес</span>
               </p>
-                <a href="" class="tariff__button button">Оформить заявку</a>
+                <button class="tariff__button button">Оформить заявку</button>
               </div>
             </li>
             <li class="tariff__item">
@@ -158,7 +157,7 @@
               <div class="tariff__wrap">
                 <p class="tariff__price">35 900<span> руб/мес</span>
                 </p>
-                <a href="" class="tariff__button button">Оформить заявку</a>
+                <button class="tariff__button button">Оформить заявку</button>
               </div>
             </li>
             <li class="tariff__item">
@@ -176,7 +175,7 @@
               <div class="tariff__wrap">
                 <p class="tariff__price">35 900<span> руб/мес</span>
                 </p>
-                <a href="" class="tariff__button button">Оформить заявку</a>
+                <button class="tariff__button button">Оформить заявку</button>
               </div>
             </li>
           </ul>
@@ -289,40 +288,40 @@
       </section>
     </main>
 
-    <!-- <div class="modal modal--sign-up">
+    <div class="modal modal--request">
       <div class="modal__body">
+        <div class="modal__container">
         <h3 class="modal__title">Оформить заявку</h3>
-        <form action="" class="form form--sign-up">
+        <form action="" class="form form--request">
           <fieldset class="form__fieldset form__fieldset--user">
             <label class="form__label">
 
-              <span class="form__text">Имя</span>
+              <span class="form__text">Имя*</span>
 
-              <input class="form__input" name="name" type="text">
+              <input class="form__input" name="name" type="text" required>
             </label>
             <label class="form__label">
               <span class="form__text">Фамилия</span>
               <input class="form__input" name="surname" type="text">
             </label>
             <label class="form__label">
-              <span class="form__text">Телефон</span>
-              <input class="form__input" name="phone" type="text">
+              <span class="form__text">Телефон (с кодом города)*</span>
+              <input class="form__input" name="phone" type="text" placeholder="+7 (___) ___-__-__" required>
             </label>
             <label class="form__label">
-              <span class="form__text">E-mail</span>
+              <span class="form__text">Адрес электронной почты</span>
               <input class="form__input" name="email" type="email">
             </label>
-
           </fieldset>
 
           <div class="form__wrapper-btn">
 
             <button class="form__submit form__submit--sign-up">
-              Отправить
+              Отправить заявку
             </button>
           </div>
         </form>
-
+        </div>
         <button class="modal__close">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
             xmlns="http://www.w3.org/2000/svg">
@@ -331,7 +330,7 @@
           </svg>
         </button>
       </div>
-    </div> -->
+    </div>
     <footer class="page-footer">
       <div class="page-footer__container container">
         <ul class="page-footer__list">

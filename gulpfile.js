@@ -50,7 +50,7 @@ const html = () => {
 
 const scripts = () => {
   return gulp.src('source/js/*.js',
-  // 'source/dist/js/*.js',
+  'source/dist/js/*.js',
   )
   .pipe(terser())
   .pipe(gulp.dest('build/js'))
@@ -108,7 +108,7 @@ const copy = (done) => {
   gulp.src([
     'source/fonts/*.{woff2,woff}',
     // 'source/*.ico',
-    'source/img/favicons/*.{png,svg}',
+    // 'source/img/favicons/*.{png,svg}',
     // 'source/manifest.webmanifest',
     // 'source/robots.txt',
     // 'source/sitemap.xml',
@@ -153,8 +153,7 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
-  gulp.watch('source/js/script.js', gulp.series(scripts));
-  gulp.watch('source/dist/js/lightbox-plus-jquery.js', gulp.series(scripts));
+  gulp.watch('source/js/*.js', gulp.series(scripts));
   gulp.watch('source/*.html', gulp.series(html, reload));
 }
 

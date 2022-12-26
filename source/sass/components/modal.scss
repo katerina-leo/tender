@@ -48,6 +48,10 @@
     margin: 0 auto;
   }
 
+  &--open {
+    display: flex;
+  }
+
   &__close {
     position: absolute;
     top: 0;
