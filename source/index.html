@@ -290,38 +290,45 @@
 
     <div class="modal modal--request">
       <div class="modal__body">
-        <div class="modal__container">
-        <h3 class="modal__title">Оформить заявку</h3>
-        <form action="" class="form form--request">
-          <fieldset class="form__fieldset form__fieldset--user">
-            <label class="form__label">
 
-              <span class="form__text">Имя*</span>
+          <h3 class="modal__title">Оформить заявку</h3>
+          <form action="" class="form form--request" id="form">
+            <fieldset class="form__fieldset form__fieldset--user">
+              <label class="form__label">
+                <span class="form__text">Имя*</span>
+                <input class="form__input form__input--req" name="name" type="text">
+              </label>
+              <!-- <label class="form__label">
+                <span class="form__text">Фамилия</span>
+                <input class="form__input" name="surname" type="text">
+              </label> -->
+              <label class="form__label">
+                <span class="form__text">Телефон*</span>
+                <input class="form__input form__input--req" name="phone" type="text" placeholder="+7 (___) ___-__-__" >
+              </label>
+              <label class="form__label">
+                <span class="form__text">Адрес электронной почты</span>
+                <input class="form__input form__input--email" name="email" type="email">
+              </label>
+              <label class="form__label form__label--checkbox">
+                <input class="form__input form__input--checkbox form__input--req" name="agreement" type="checkbox" checked>
+                <span class="form__text form__text--checkbox">Я даю согласие на обработку персональных данных</span>
+              </label>
+            </fieldset>
 
-              <input class="form__input" name="name" type="text" required>
-            </label>
-            <label class="form__label">
-              <span class="form__text">Фамилия</span>
-              <input class="form__input" name="surname" type="text">
-            </label>
-            <label class="form__label">
-              <span class="form__text">Телефон (с кодом города)*</span>
-              <input class="form__input" name="phone" type="text" placeholder="+7 (___) ___-__-__" required>
-            </label>
-            <label class="form__label">
-              <span class="form__text">Адрес электронной почты</span>
-              <input class="form__input" name="email" type="email">
-            </label>
-          </fieldset>
+            <div class="form__wrapper-btn">
 
-          <div class="form__wrapper-btn">
+              <button class="form__submit form__submit--sign-up" type="submit">
+                Отправить заявку
+              </button>
+            </div>
+          </form>
 
-            <button class="form__submit form__submit--sign-up">
-              Отправить заявку
-            </button>
+          <div class="modal__success modal__success--done">
+            Форма успешно отправлена.
           </div>
-        </form>
-        </div>
+
+
         <button class="modal__close">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
             xmlns="http://www.w3.org/2000/svg">
@@ -348,7 +355,12 @@
         </ul>
       </div>
     </footer>
-
+<!-- Сообщение об успешном отправке -->
+<template id="success">
+  <div class="success">
+    <p class="success__message">Ваша заявка успешно отправленa!</р>
+  </div>
+</template>
 </body>
 
 </html>

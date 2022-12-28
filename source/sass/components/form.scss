@@ -4,10 +4,6 @@
     flex-wrap: wrap;
     gap: 16px 12px;
 
-    // @include mobile {
-    //   gap: 8px;
-    // }
-
     &--user {
       margin-bottom: 46px;
     }
@@ -22,9 +18,9 @@
     font-size: 16px;
     margin-bottom: 4px;
 
-    // @include mobile {
-    //   font-size: 14px;
-    // }
+    &--checkbox {
+      display: inline;
+    }
   }
 
   &__input {
@@ -36,6 +32,20 @@
     padding: 10px 14px;
     font-weight: 300;
     color: $black;
+    outline: none;
+
+    &--checkbox {
+      width: 20px;
+      height: 20px;
+    }
+
+    &:focus {
+      box-shadow: 0 0 10px rgba(174, 174, 182, 0.5);
+    }
+
+    &--error {
+      box-shadow: 0 0 10px #ff0000;
+    }
   }
 
   &__wrapper-btn {
