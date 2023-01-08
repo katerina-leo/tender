@@ -12,6 +12,7 @@ import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import terser from 'gulp-terser';
+import IMask from 'imask';
 
 // Styles
 
@@ -52,7 +53,7 @@ const scripts = () => {
   return gulp.src('source/js/*.js',
   'source/dist/js/*.js',
   )
-  .pipe(terser())
+  // .pipe(terser())
   .pipe(gulp.dest('build/js'))
   .pipe(browser.stream());
 }
@@ -154,6 +155,7 @@ const reload = (done) => {
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/js/*.js', gulp.series(scripts));
+  // gulp.watch('source/dist/js/lightbox-plus-jquery.js', gulp.series(scripts));
   gulp.watch('source/*.html', gulp.series(html, reload));
 }
 

@@ -36,7 +36,7 @@
 
   @media (min-width: $mobile-width-only) {
     padding: 15px 30px 15px;
-    grid-template-columns: 1fr 120px;
+    grid-template-columns: 1fr 90px;
   }
 }
 
@@ -56,6 +56,5 @@
   font-size: 18px;
   font-weight: 700;
   color: #1e5a32;
-  align-self: flex-end;
   justify-self: end;
 }

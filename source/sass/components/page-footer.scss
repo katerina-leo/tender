@@ -5,15 +5,12 @@
 .page-footer__container {
   padding: 35px 10px;
   min-height: 150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  display: grid;
   gap: 20px;
 
   @media (min-width: $tablet-width) {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
   }
 
   @media (min-width: $laptop-width) {
@@ -21,19 +18,41 @@
   }
 }
 
+.page-footer__logo {
+  @media (min-width: $tablet-width) {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+}
+
 .page-footer__title {
   font-size: 16px;
   line-height: 25px;
-
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 15px;
+  font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 15px;
+  }
 }
 
 .page-footer__list {
   display: flex;
   flex-direction: column;
   align-items: start;
+
+  &--site {
+    @media (min-width: $tablet-width) {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+  }
+}
+
+.page-footer__contacts {
+  @media (min-width: $tablet-width) {
+    grid-area: 1 / 2 / 3 / 3;
+    justify-self: end;
+  }
 }
 
 .page-footer__item {
@@ -41,14 +60,6 @@
   line-height: 26px;
   padding-left: 30px;
   position: relative;
-
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
 
   &--site {
     padding-left: 0;
@@ -72,5 +83,15 @@
 
   &--phone::before {
     background-image: url("../img/call.svg");
+  }
+}
+
+.page-footer__link {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

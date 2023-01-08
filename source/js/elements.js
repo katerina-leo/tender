@@ -5,3 +5,5 @@ export const tariffButtons = document.querySelectorAll('.tariff__button');
 export const formRequest = document.querySelector('.form--request');
 export const modalContainer = document.querySelector('.modal__container');
 export const modalSuccess = document.querySelector('.modal__success');
+export const form = document.getElementById('form');
+export const request = modalElem.querySelector('.modal__order');
