@@ -1,1 +1,17 @@
-export const toggleMenu=()=>{const e=document.querySelector(".main-nav"),n=document.querySelector(".main-nav__toggle");e.classList.remove("main-nav--no-js"),n.addEventListener("click",(()=>{e.classList.contains("main-nav--closed")?(e.classList.remove("main-nav--closed"),e.classList.add("main-nav--opened")):(e.classList.add("main-nav--closed"),e.classList.remove("main-nav--opened"))}))};
+export const toggleMenu = () => {
+  const navMain = document.querySelector('.main-nav');
+  const navToggle = document.querySelector('.main-nav__toggle');
+
+  navMain.classList.remove('main-nav--no-js');
+
+  navToggle.addEventListener('click', () => {
+    if (navMain.classList.contains('main-nav--closed')) {
+      navMain.classList.remove('main-nav--closed');
+      navMain.classList.add('main-nav--opened');
+    } else {
+      navMain.classList.add('main-nav--closed');
+      navMain.classList.remove('main-nav--opened');
+    }
+  });
+
+}

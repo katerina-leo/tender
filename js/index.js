@@ -1,1 +1,64 @@
-import{toggleMenu}from"./toggleMenu.js";import{modalElem,tariffButtons,formRequest,modalContainer,modalSuccess,modalBody}from"./elements.js";document.addEventListener("DOMContentLoaded",(()=>{const e=document.getElementById("form"),t=e=>{e.classList.add("form__input--error")},o=e=>{e.classList.remove("form__input--error")},s=e=>!/^\w([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(e.value);e.addEventListener("submit",(async l=>{l.preventDefault();let a=(e=>{let l=0,a=document.querySelectorAll(".form__input--req");for(let e=0;e<a.length;e++){const d=a[e];o(d),d.classList.contains("form__input--email")?s(d)&&(t(d),l++):("checkbox"===d.getAttribute("type")&&!1===d.checked||""===d.value)&&(t(d),l++)}return l})();const d=new FormData(e);if(0===a){modalBody.classList.add("modal__body--sending");let t=await fetch("https://tender.tenke.ru/requests",{method:"POST",body:d});if(t.ok){let o=await t.json();alert(o.message),e.reset(),modalBody.classList.remove("modal__body--sending")}else alert("Ошибка"),modalBody.classList.remove("modal__body--sending")}else alert("Заполните обязательные поля")}))}));const init=()=>{toggleMenu(),tariffButtons.forEach((e=>{e.addEventListener("click",(()=>{modalElem.classList.add("modal--open")}))})),modalElem.addEventListener("click",(e=>{const t=e.target;(t.closest(".modal__close")||t===modalElem||"Escape"===e.code||"submit"===e.type)&&modalElem.classList.remove("modal--open")}))};toggleMenu(),tariffButtons.forEach((e=>{e.addEventListener("click",(()=>{modalElem.classList.add("modal--open")}))})),modalElem.addEventListener("click",(e=>{const t=e.target;(t.closest(".modal__close")||t===modalElem||"Escape"===e.code||"submit"===e.type)&&modalElem.classList.remove("modal--open")}));
+
+import { toggleMenu } from "./toggleMenu.js";
+import { modalElem, tariffButtons, form,request } from "./elements.js";
+import { formSend } from "./formSend.js";
+
+
+
+
+// document.addEventListener('DOMContentLoaded', () => {
+// });
+
+// const setForm = () => {
+//     formRequest.addEventListener('submit', (evt) => {
+//       evt.preventDefault();
+//       fetch('https://639333d911ed187986ae657a.mockapi.io/order', {
+//         method: 'post',
+//       }).then(response => response.json())
+//         .then(response => {
+//           showSuccessMessage();
+
+//         })
+//         .catch((error) => {
+//           modalContainer.innerHTML = `
+//             <h2>Не удалось</h2>
+
+//             `
+//         });
+
+//     })
+// }
+
+
+const phoneInput = document.querySelector(".form__input--phone");
+    const maskOptions = {
+      mask: '+{7}(000)000-00-00'
+    };
+  const mask = IMask(phoneInput, maskOptions);
+
+const init = () => {
+  toggleMenu();
+
+  tariffButtons.forEach((tariffButton) => {
+    tariffButton.addEventListener('click', () => {
+      modalElem.classList.add('modal--open')
+      request.value = tariffButton.dataset.order;
+    }
+
+    )
+  })
+
+  modalElem.addEventListener('click', (event) => {
+    const target = event.target;
+
+    if(target.closest('.modal__close')
+      || target === modalElem || event.code === 'Escape' ||
+          event.type === 'submit') {
+      modalElem.classList.remove('modal--open')
+    }
+  })
+
+form.addEventListener('submit', formSend);
+}
+
+init();
