@@ -51,8 +51,8 @@ export const onErrorPopupEscKeydown = (evt) => {
 };
 
 //показ сообщения об  отправке с ошибкой
-export const showErrorMessage = (createMessageTemplate) => {
-  const template = createMessageTemplate();
+export const showErrorMessage = (createErrorTemplate) => {
+  const template = createErrorTemplate();
   document.body.appendChild(template);
   const errorButton = document.querySelector('.error__button');
 
