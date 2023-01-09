@@ -28,20 +28,6 @@ export const styles = () => { // Название задачи для дальн
     .pipe(browser.stream());
 }
 
-
-// export const styles = () => {
-//   return gulp.src('source/sass/style.scss', { sourcemaps: true })
-//     .pipe(plumber()) //обработка ошибок
-//     .pipe(sass().on('error', sass.logError)) //sass превращается  в css
-//     .pipe(postcss([  //style.css
-//       autoprefixer(), //style.css => style.css (prefix)
-//       csso() // style.css (prefix) => style.css (prefix, min)
-//     ]))
-//     .pipe(rename('style.min.css'))
-//     .pipe(gulp.dest('build/css', { sourcemaps: '.' })) //положи в папку source
-//     .pipe(browser.stream());
-// }
-
 const html = () => {
   return gulp.src('source/*.html')
   .pipe(htmlmin({ collapseWhitespace: true }))

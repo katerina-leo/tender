@@ -14,7 +14,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.css">
+
+
   <script src="https://unpkg.com/imask" defer></script>
   <script type="module" src="js/index.js"></script>
 
@@ -283,6 +286,11 @@
               <p class="services__price">500-1000<span> рублей</span>
               </p>
             </li>
+            <li class="services__item">
+              <p class="services__desc">Регистрация на АСТ ГОЗ</p>
+              <p class="services__price">5000<span> рублей</span>
+              </p>
+            </li>
 
           </ul>
           <div class="services__image">
@@ -308,65 +316,89 @@
           </ul>
         </div>
       </section>
-      <!-- <section class="page-main__reviews-1 reviews-1">
-        <div class="koguvcavis-varazdel">
-          <div class="sestim-donials">
-            <h1>Отзывы</h1>
-            <div class="sectionesag"></div>
-            <div class="sagestim-lonials">
-              <div class="vemotau-vokusipol">
-                <div class="testimonial">
-                  <img src="http://zornet.ru/_fr/83/7890600.jpg" alt="">
-                  <div class="gecedanam">Антон Попов</div>
-                  <div class="apogered-gselected">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+      <section class="page-main__reviews-1 reviews-1">
+        <div class="reviews-1__container">
+          <!-- <div class="sestim-donials"> -->
+          <h2 class="reviews-1__title">Отзывы клиентов</h2>
+            <!-- <div class="reviews-1__line"></div> -->
+            <div class="swiper">
+              <div class="reviews-1__wrapper review swiper-wrapper">
+                <div class="review-1__wrap swiper-slide">
+
+                    <img class="review-1__img" src="http://zornet.ru/_fr/83/7890600.jpg" alt="">
+                    <p class="review-1__name">Антон Попов</p>
+                    <div class="review-1__stars">
+                      <img class="service__star" src="img/star.svg" alt="Рейтинг специалста 4 из 5">
+                      <img class="service__star" src="img/star.svg" alt="">
+                      <img class="service__star" src="img/star.svg" alt="">
+                      <img class="service__star" src="img/star.svg" alt="">
+                      <img class="service__star" src="img/star.svg" alt="">
                     </div>
 
-                  <p>Здесь первое описание. Продолжение.</p>
-                  </div>
+                    <p>Lorem Ipsum был стандартным фиктивным текстом в индустрии с 1500-х годов, Lorem Ipsum был стандартным фиктивным текстом в индустрии с 1500-х годов, Lorem Ipsum был стандартным фиктивным текстом в индустрии с 1500-х годов,</p>
+
                 </div>
+                <div class="review-1__wrap swiper-slide">
 
-              <div class="vemotau-vokusipol">
-                <div class="testimonial">
-                  <img src="http://zornet.ru/_fr/83/2047084.jpg" alt="">
-                  <div class="gecedanam">Дмитрий Атрохов</div>
-                  <div class="apogered-gselected">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    </div>
+                  <img class="review-1__img" src="http://zornet.ru/_fr/83/7890600.jpg" alt="">
+                  <p class="review-1__name">Антон Попов</p>
+                  <div class="review-1__stars">
+                    <img  src="img/star.svg" alt="Рейтинг специалста 4 из 5">
+                    <img  src="img/star.svg" alt="">
+                    <img  src="img/star.svg" alt="">
+                    <img  src="img/star.svg" alt="">
+                    <img  src="img/star.svg" alt="">
+                  </div>
 
-                    <p>Второй отзыв. Его продолжение.</p>
-                    </div>
-                  </div>
+                  <p>Lorem Ipsum был стандартным фиктивным текстом в индустрии с 1500-х годов, Lorem Ipsum был стандартным фиктивным
+                    текстом в индустрии с 1500-х годов, Lorem Ipsum был стандартным фиктивным текстом в индустрии с 1500-х годов,</p>
 
-                <div class="vemotau-vokusipol">
-                  <div class="testimonial">
-                    <img src="http://zornet.ru/_fr/83/5640570.jpg" alt="">
-                    <div class="gecedanam">Каспер Волков</div>
-                    <div class="apogered-gselected">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="far fa-star"></i>
-                      </div>
+                </div>
+                <div class="review-1__wrap swiper-slide">
 
-                    <p>Третье описание. На отзыв.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                  <img class="review-1__img" src="http://zornet.ru/_fr/83/7890600.jpg" alt="">
+                  <p class="review-1__name">Антон Попов</p>
+                  <div class="review-1__stars">
+                    <img class="service__star" src="img/star.svg" alt="Рейтинг специалста 4 из 5">
+                    <img class="service__star" src="img/star.svg" alt="">
+                    <img class="service__star" src="img/star.svg" alt="">
+                    <img class="service__star" src="img/star.svg" alt="">
+                    <img class="service__star" src="img/star.svg" alt="">
+                  </div>
 
-            CSS
-      </section> -->
-      <section class="page-main__reviews reviews">
+                  <p>Lorem Ipsum был стандартным фиктивным текстом в индустрии с 1500-х годов, Lorem Ipsum был стандартным фиктивным
+                    текстом в индустрии с 1500-х годов, Lorem Ipsum был стандартным фиктивным текстом в индустрии с 1500-х годов,</p>
+
+                </div>
+                <div class="review-1__wrap swiper-slide">
+
+                  <img class="review-1__img" src="http://zornet.ru/_fr/83/7890600.jpg" alt="">
+                  <p class="review-1__name">Антон Попов</p>
+                  <div class="review-1__stars">
+                    <img class="service__star" src="img/star.svg" alt="Рейтинг специалста 4 из 5">
+                    <img class="service__star" src="img/star.svg" alt="">
+                    <img class="service__star" src="img/star.svg" alt="">
+                    <img class="service__star" src="img/star.svg" alt="">
+                    <img class="service__star" src="img/star.svg" alt="">
+                  </div>
+
+                  <p>Lorem Ipsum был стандартным фиктивным текстом в индустрии с 1500-х годов, Lorem Ipsum был стандартным фиктивным
+                    текстом в индустрии с 1500-х годов, Lorem Ipsum был стандартным фиктивным текстом в индустрии с 1500-х годов,ндустрии с 1500-х годов, Lorem Ipsum был стандартным фиктивным текстом в индустрии с 1500-х годов,</p>
+
+                </div>
+              </div>
+
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <section class="page-main__reviews reviews">
         <div class="reviews__container container">
           <h2 class="reviews__title">Отзывы клиентов</h2>
 
@@ -385,7 +417,7 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
     </main>
 
     <div class="modal modal--request">
@@ -425,24 +457,18 @@
           <!-- Сообщение об успешном отправлении -->
           <template id="success">
             <div class="success">
-              <p class="success__message">Ваше заявка отправлена</p>
-              <p> С вами свяжется наш менеджер</p>
+              <p class="success__message success__message--cross">Ваша заявка отправлена.</p>
+              <p class="success__message"> С вами свяжется наш менеджер.</p>
             </div>
           </template>
 
-          <!-- Заполните все поля -->
+          <!-- Заявка не отправлена -->
           <template id="error">
             <div class="error">
-              <p class="error__message">Заявка не отправлена</p>
+              <p class="error__message error__message--cross">Заявка не отправлена</p>
               <button type="button" class="error__button">Попробовать снова</button>
             </div>
           </template>
-
-          <div class="modal__success modal__success--done">
-            Форма успешно отправлена.
-          </div>
-
-
         <button class="modal__close">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
             xmlns="http://www.w3.org/2000/svg">

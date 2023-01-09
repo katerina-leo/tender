@@ -3,40 +3,56 @@ import { toggleMenu } from "./toggleMenu.js";
 import { modalElem, tariffButtons, form,request } from "./elements.js";
 import { formSend } from "./formSend.js";
 
+import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
 
-
-
-// document.addEventListener('DOMContentLoaded', () => {
-// });
-
-// const setForm = () => {
-//     formRequest.addEventListener('submit', (evt) => {
-//       evt.preventDefault();
-//       fetch('https://639333d911ed187986ae657a.mockapi.io/order', {
-//         method: 'post',
-//       }).then(response => response.json())
-//         .then(response => {
-//           showSuccessMessage();
-
-//         })
-//         .catch((error) => {
-//           modalContainer.innerHTML = `
-//             <h2>Не удалось</h2>
-
-//             `
-//         });
-
-//     })
-// }
 
 
 const phoneInput = document.querySelector(".form__input--phone");
     const maskOptions = {
       mask: '+{7}(000)000-00-00'
     };
-  const mask = IMask(phoneInput, maskOptions);
+    const mask = IMask(phoneInput, maskOptions);
+
+
+const swiper = new Swiper('.swiper', {
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+      dynamicBullets: true,
+    },
+
+    slideToClickedSlide: true,
+
+    autoHeight: true,
+
+      slidesPerView: 1,
+      spaceBetween: 10,
+
+      breakpoints: {
+
+        480: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        }
+      }
+})
+
 
 const init = () => {
+
+
+
   toggleMenu();
 
   tariffButtons.forEach((tariffButton) => {

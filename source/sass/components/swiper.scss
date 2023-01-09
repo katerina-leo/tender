@@ -1,0 +1,22 @@
+.swiper-slide {
+  height: 400px;
+}
+
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: #1e5a32;
+  font-size: 40px;
+}
+
+.swiper-pagination {
+  bottom: 0;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  line-height: 10px;
+  background-color: #1e5a32;
+  font-size: 10px;
+}
