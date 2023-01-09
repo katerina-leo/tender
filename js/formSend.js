@@ -1,5 +1,5 @@
 import { formValidate } from "./formValidate.js";
-import { modalBody } from "./elements.js";
+import { modalBody, modalElem } from "./elements.js";
 import { showErrorMessage, showSuccessMessage } from "./util.js";
 
 
@@ -15,7 +15,7 @@ export const formSend = async (evt) => {
     if(error === 0) {
       modalBody.classList.add('modal__body--sending')
 
-      let response = await fetch('https://tender.tenke.ru/requests', {
+      let response = await fetch('/requests', {
         method: 'POST',
         body: formData
       });
@@ -24,9 +24,13 @@ export const formSend = async (evt) => {
         showSuccessMessage();
         form.reset();
         modalBody.classList.remove('modal__body--sending');
+        modalElem.classList.remove('modal--open');
       } else {
-        showErrorMessage()
+        showErrorMessage();
         modalBody.classList.remove('modal__body--sending');
+
+        // modalBody.classList.remove('modal__body--sending');
+        // showErrorMessage();
       }
     } else {
       showErrorMessage();

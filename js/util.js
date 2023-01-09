@@ -1,48 +1,48 @@
 
 
-export const successMessageTemplate = document.querySelector('#success')
+const successMessageTemplate = document.querySelector('#success')
   .content
   .querySelector('.success');
-export const errorMessageTemplate = document.querySelector('#error')
+const errorMessageTemplate = document.querySelector('#error')
   .content
   .querySelector('.error');
 
-//шаблон сообщения при успешной отправке формы
-export const createSuccessTemplate = () =>{
+
+const createSuccessTemplate = () =>{
   const successMessageElement = successMessageTemplate.cloneNode(true);
   return successMessageElement;
 };
 
-//шаблон сообщения об отправке формы с ошибкой
-export const createErrorTemplate = () =>{
+
+const createErrorTemplate = () =>{
   const errorMessageElement = errorMessageTemplate.cloneNode(true);
   return errorMessageElement;
 };
 
-//удаляет сообщение об успешной отправке кнопкой esk
-export const onSuccessPopupEscKeydown = (evt) => {
+
+const onSuccessPopupEscKeydown = (evt) => {
   if (evt.key === 'Escape') {
     evt.preventDefault();
-    document.querySelector('.success').remove();//удаляет сообщение
-    document.removeEventListener('keydown', onSuccessPopupEscKeydown);//удаляет слушатель
+    document.querySelector('.success').remove();
+    document.removeEventListener('keydown', onSuccessPopupEscKeydown);
   }
 };
 
-//показ сообщения об успешной отправке
-export const showSuccessMessage = (createMessageTemplate) => {
-  const template = createMessageTemplate();
+
+export const showSuccessMessage = () => {
+  const template = createSuccessTemplate();
   document.body.appendChild(template);
 
   document.querySelector('.success').addEventListener('click', (evt) => {
     evt.preventDefault();
     document.querySelector('.success').remove();
-    document.removeEventListener('keydown', onSuccessPopupEscKeydown);//удаляет слушатель
+    document.removeEventListener('keydown', onSuccessPopupEscKeydown);
   });
   document.addEventListener('keydown', onSuccessPopupEscKeydown);
 };
 
-//удаляет сообщение об отправке с ошибкой кнопкой esk
-export const onErrorPopupEscKeydown = (evt) => {
+
+const onErrorPopupEscKeydown = (evt) => {
   if (evt.key === 'Escape') {
     evt.preventDefault();
     document.querySelector('.error').remove();
@@ -50,8 +50,8 @@ export const onErrorPopupEscKeydown = (evt) => {
   }
 };
 
-//показ сообщения об  отправке с ошибкой
-export const showErrorMessage = (createErrorTemplate) => {
+
+export const showErrorMessage = () => {
   const template = createErrorTemplate();
   document.body.appendChild(template);
   const errorButton = document.querySelector('.error__button');
