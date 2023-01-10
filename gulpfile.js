@@ -49,7 +49,7 @@ const scripts = () => {
 //Images
 
 const optimizeImages = () => {
-  return gulp.src('source/img/**/*.{jpg,png,jpeg,gif}',
+  return gulp.src('source/img/**/*.{jpg,png,jpeg,gif,webp}',
 
   )
   .pipe(squoosh())
@@ -57,7 +57,7 @@ const optimizeImages = () => {
 }
 
 const copyImages = () => {
-  return gulp.src('source/img/**/*.{jpg,png,gif}',
+  return gulp.src('source/img/**/*.{jpg,png,gif,webp}',
   )
 
   .pipe(gulp.dest('build/img'));
@@ -101,7 +101,7 @@ const copy = (done) => {
     // 'source/sitemap.xml',
     'source/dist/css/*.css',
     'source/dist/js/*.js',
-    'source/dist/images/**/*.{jpg,png,gif}',
+    'source/dist/images/**/*.{jpg,png,gif,webp}',
   ], {
     base: 'source'
   })

@@ -1,12 +1,27 @@
+// .reviews-1__swiper {
+//   max-width: 1260px;
+// }
+
 .swiper-slide {
-  height: 400px;
+  height: 300px;
 }
 
+.swiper-button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 120px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: 35px;
+}
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
   color: #1e5a32;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .swiper-pagination {

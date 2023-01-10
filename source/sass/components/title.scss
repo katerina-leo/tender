@@ -2,13 +2,15 @@
   min-height: 180px;
   background-image: url("../img/title.jpg");
   background-color: $black;
+  background-position: center;
+  object-fit: contain;
 }
 
 .title__container {
   padding: 10px;
 
   @media (min-width: $laptop-width) {
-    padding: 35px 30px 10px;
+    padding: 35px 30px 30px;
   }
 }
 

@@ -30,14 +30,14 @@ const swiper = new Swiper('.swiper', {
 
     slideToClickedSlide: true,
 
-    autoHeight: true,
+    // autoHeight: true,
 
       slidesPerView: 1,
       spaceBetween: 10,
 
       breakpoints: {
 
-        480: {
+        620: {
           slidesPerView: 2,
           spaceBetween: 20
         },
