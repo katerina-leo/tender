@@ -62,6 +62,8 @@
     font-weight: 400;
     background-color: #ffd600;
     border-radius: 4px;
+    color: $font-color;
+    font-size: 16px;
 
     &--request {
       align-self: flex-end;

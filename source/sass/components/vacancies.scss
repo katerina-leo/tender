@@ -1,16 +1,23 @@
 .vacancies__container {
-  padding: 35px 10px 90px;
+  padding: 35px 10px 35px;
   margin-bottom: 5px;
-  box-shadow: 0 0 10px $box-shadow-color;
-
 
   @media (min-width: $tablet-width) {
-    padding: 35px 30px 90px;
+    padding: 35px 10px 35px;
   }
 
   @media (min-width: $laptop-width) {
-    padding: 35px 50px 90px;
+    padding: 35px 30px 35px;
   }
+}
+
+.vacancies__wrapper {
+  box-shadow: 0 0 10px $box-shadow-color;
+  max-width: 500px;
+  height: min-content;
+  padding: 30px;
+  background-color: $bg-color;
+  // text-align: center;
 }
 
 .vacancies__title {
@@ -20,6 +27,7 @@
 .vacancies__name {
   text-transform: uppercase;
   margin-bottom: 20px;
+  font-weight: 700;
 }
 
 .vacancies__desc {
@@ -39,7 +47,7 @@
 
 .vacancies__slogan {
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .vacancies__link {
