@@ -1,6 +1,7 @@
 
+
 import { toggleMenu } from "./toggleMenu.js";
-import { modalElem, tariffButtons, form,request } from "./elements.js";
+import { modalElem, form,request, buttonsRequest } from "./elements.js";
 import { formSend } from "./formSend.js";
 
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
@@ -30,8 +31,6 @@ const swiper = new Swiper('.swiper', {
 
     slideToClickedSlide: true,
 
-    // autoHeight: true,
-
       slidesPerView: 1,
       spaceBetween: 10,
 
@@ -50,15 +49,12 @@ const swiper = new Swiper('.swiper', {
 
 
 const init = () => {
-
-
-
   toggleMenu();
 
-  tariffButtons.forEach((tariffButton) => {
-    tariffButton.addEventListener('click', () => {
+  buttonsRequest.forEach((buttonRequest) => {
+    buttonRequest.addEventListener('click', () => {
       modalElem.classList.add('modal--open')
-      request.value = tariffButton.dataset.order;
+      request.value = buttonRequest.dataset.order;
     }
 
     )

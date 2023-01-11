@@ -28,9 +28,6 @@ export const formSend = async (evt) => {
       } else {
         showErrorMessage();
         modalBody.classList.remove('modal__body--sending');
-
-        // modalBody.classList.remove('modal__body--sending');
-        // showErrorMessage();
       }
     } else {
       showErrorMessage();
