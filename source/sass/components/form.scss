@@ -44,7 +44,7 @@
     }
 
     &--error {
-      box-shadow: 0 0 10px #ff0000;
+      box-shadow: 0 0 10px $error;
     }
   }
 
@@ -62,10 +62,6 @@
     font-weight: 400;
     background-color: #ffd600;
     border-radius: 4px;
-
-    // @include mobile {
-    //   font-size: 14px;
-    // }
 
     &--request {
       align-self: flex-end;

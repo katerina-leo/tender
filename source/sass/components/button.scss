@@ -1,8 +1,7 @@
 .button {
   min-width: 139px;
-  // height: 41px;
   padding: 10px 15px;
-  background-color: #e6a93f;
+  background-color: $bg-button-color;
   box-sizing: border-box;
   color: $white;
   border: none;
@@ -11,7 +10,7 @@
   line-height: 20px;
   font-weight: bold;
   text-align: center;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px 0 rgba($black, 0.25);
 
   &:hover {
     opacity: 0.9;

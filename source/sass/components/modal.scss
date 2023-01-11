@@ -8,23 +8,11 @@
   background-color: rgba($black, 0.6);
   z-index: 999;
 
-  // @include tablet {
-  //   padding: 20px;
-  // }
-
-  // @include mini {
-  //   padding: 0px;
-  // }
-
   &__title {
     font-weight: 400;
     font-size: 24px;
     text-align: center;
     margin-bottom: 24px;
-
-    // @include mobile {
-    //   font-size: 18px;
-    // }
   }
 
   &__body {
@@ -54,11 +42,6 @@
       opacity: 1;
       visibility: visible;
     }
-
-    // @include mini {
-    //   padding-left: 10px;
-    //   padding-right: 10px;
-    // }
   }
 
   &__container {

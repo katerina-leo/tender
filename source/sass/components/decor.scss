@@ -1,11 +1,11 @@
 .decor {
   min-width: 300px;
   min-height: 300px;
-  background: linear-gradient(to bottom right, #1e5a32, #84f0a4);
+  background: linear-gradient(to bottom right, $green, #84f0a4);
   padding: 35px 30px;
   color: #ffffff;
   position: relative;
-  box-shadow: 0 0 10px #1e5a32;
+  box-shadow: 0 0 10px $green;
 
   @media (min-width: $laptop-width) {
     width: 300px;
@@ -15,7 +15,6 @@
 
 .decor__start {
   text-transform: uppercase;
-  // margin-bottom: 30px;
 }
 
 .decor__count {

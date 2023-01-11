@@ -13,9 +13,9 @@ export const emailTest = (input) => {
     return EMAIL_REGEXP.test(input.value);
 }
 
-export const validatePhone = (PHONE_REGEXP, input) => {
-    return PHONE_REGEXP.test(input);
-}
+// export const validatePhone = (PHONE_REGEXP, input) => {
+//     return PHONE_REGEXP.test(input);
+// }
 
 
 export const formValidate = (form) => {
@@ -34,12 +34,12 @@ export const formValidate = (form) => {
             error++;
             }
 
-          } else if (input.classList.contains('form__input--phone')) {
-            if(!validatePhone(PHONE_REGEXP, input.value)) {
-            formAddError(input);
-            error++;
+          // } else if (input.classList.contains('form__input--phone')) {
+          //   if(!validatePhone(PHONE_REGEXP, input.value)) {
+          //   formAddError(input);
+          //   error++;
 
-            }
+          //   }
           }
 
           else if (input.getAttribute("type") === "checkbox" && input.checked === false) {

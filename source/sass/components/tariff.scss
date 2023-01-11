@@ -6,7 +6,7 @@
   padding: 35px 10px;
 
   @media (min-width: $tablet-width) {
-    padding: 10px;
+    padding: 20px 10px 25px;
   }
 
   @media (min-width: $laptop-width) {
@@ -30,7 +30,7 @@
 
 .tariff__item {
   padding: 20px 30px 30px;
-  box-shadow: 0 0 10px rgba(174, 174, 182, 0.5);
+  box-shadow: 0 0 10px $box-shadow-color;
   border-radius: 5px;
   background: #ffffff;
   display: grid;

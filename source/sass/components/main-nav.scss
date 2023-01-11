@@ -1,5 +1,4 @@
 .main-nav {
-  // position: relative;
   width: 100%;
   z-index: 100;
   background-color: $white;
@@ -27,7 +26,7 @@
   }
 
   @media (min-width: $laptop-width) {
-    padding: 10px 30px 10px;
+    padding: 10px 30px;
   }
 }
 
@@ -40,8 +39,6 @@
 .main-nav__list {
   background-color: $bg-color;
   align-items: center;
-  // padding: 0;
-  // margin: 0;
   color: $white;
   font-size: 18px;
   line-height: 22.7px;
@@ -96,12 +93,6 @@
     }
   }
 
-  .main-nav--opened {
-    // position: absolute;
-    // top: 0;
-    // z-index: 1;
-  }
-
   .main-nav--opened .main-nav__logo {
     display: none;
   }
@@ -131,9 +122,8 @@
 
 .main-nav__item {
   position: relative;
-  // padding: 10px;
   text-align: center;
-  box-shadow: 0 0 10px rgba(174, 174, 182, 0.5);
+  box-shadow: 0 0 10px $box-shadow-color;
   background-color: #f9f9f9;
   border-radius: 5px;
 
@@ -155,10 +145,6 @@
 }
 
 .main-nav__item:last-child {
-  // @media (min-width: $mobile-width-only) {
-  //   margin-right: 0;
-  // }
-
   &::after {
     content: "";
     position: absolute;
@@ -191,13 +177,11 @@
     font-size: 20px;
     font-weight: 700;
     padding-bottom: 15px;
-    // padding-right: 0;
   }
 
   &--email {
     display: inline;
     text-transform: none;
-    // padding-right: 0;
   }
 
   @media (min-width: $mobile-width-only) {
@@ -217,50 +201,6 @@
 
 .main-nav__link--hover {
   position: relative;
-}
-
-.main-nav__list-2 {
-  list-style: none;
-  width: 100%;
-  padding: 0;
-
-  display: none;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-
-  @media (min-width: $mobile-width-only) {
-    position: absolute;
-    width: 200px;
-    top: 35px;
-    right: 0;
-    z-index: 1;
-    left: 20px;
-  }
-}
-
-.main-nav__item-2 {
-  padding: 5px 10px;
-  background-color: $white;
-  border-bottom: 1px solid $border-gray;
-}
-
-.main-nav__link-2 {
-  color: $font-color;
-
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-}
-
-.main-nav__list li:hover .main-nav__list-2 {
-  display: block;
-
-  @media (min-width: $mobile-width-only) {
-    display: block;
-  }
 }
 
 .main-nav__contacts {

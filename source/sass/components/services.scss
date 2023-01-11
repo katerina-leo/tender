@@ -9,7 +9,7 @@
   gap: 30px;
 
   @media (min-width: $tablet-width) {
-    padding: 10px;
+    padding: 10px 10px 25px;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: min-content 1fr;
   }
@@ -26,9 +26,9 @@
 
 .services__item {
   padding: 10px;
-  box-shadow: 0 0 10px rgba(174, 174, 182, 0.5);
+  box-shadow: 0 0 10px $box-shadow-color;
   border-radius: 5px;
-  background: #ffffff;
+  background: $white;
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
@@ -42,14 +42,11 @@
 
 .services__title {
   grid-area: 1 / 1 / 2 /-1;
+  font-size: 20px;
 }
 
 .services__image {
-  // padding: 0 5px;
-
-  @media (min-width: $tablet-width) {
-    grid-area: 2 / 2 / -1 / -1;
-  }
+  justify-self: center;
 }
 
 .services__price {
@@ -57,4 +54,20 @@
   font-weight: 700;
   color: #1e5a32;
   justify-self: end;
+}
+
+.services__button {
+  justify-self: center;
+
+
+  @media (min-width: $tablet-width) {
+    grid-area: 3 / 1 / -1 / -1;
+    font-size: 18px;
+    padding: 15px 20px;
+  }
+
+  @media (min-width: $laptop-width) {
+    font-size: 20px;
+    padding: 15px 20px;
+  }
 }

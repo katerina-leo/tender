@@ -10,7 +10,6 @@
   <link rel="manifest" href="manifest.webmanifest"> -->
   <link rel="preload" href="fonts/Montserrat.woff" as="font">
   <link rel="preload" href="fonts/Montserratbold.woff" as="font">
-  <link rel="preload" href="fonts/PlayfairDisplayItalic.woff" as="font">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500&display=swap" rel="stylesheet">
@@ -65,23 +64,10 @@
             <li class="main-nav__item">
               <a class="main-nav__link" href="#services"><span></span>Разовые услуги</a>
             </li>
-
-
-            <!-- <li class="main-nav__item main-nav__item--contacts">
-              <a class="main-nav__link main-nav__link--phone" href="tel:+79278425940"><span></span>+7 (927)-842-59-40</a>
-              <a class="main-nav__link" href="mailto:RiteTender@yandex.ru"><span></span>RiteTender@yandex.ru</a>
-
-            </li> -->
-            <!-- <li class="main-nav__item main-nav__item--contacts">
-              <a class="main-nav__link main-nav__link--phone" href="tel:+79278425940"><span></span>+7 (927)-842-59-40</a>
-              <a class="main-nav__link" href="mailto:RiteTender@yandex.ru"><span></span>RiteTender@yandex.ru</a>
-
-            </li> -->
-
           </ul>
           <ul class="main-nav__contacts">
             <li>
-              <a class="main-nav__link main-nav__link--phone" href="tel:+79278425940"><span></span>+7 (927)-842-59-40</a>
+              <a class="main-nav__link main-nav__link--phone" href="tel:+79379414500"><span></span>+7 (937)-941-45-00</a>
             </li>
             <li>
               <a class="main-nav__link main-nav__link--email" href="mailto:RiteTender@yandex.ru"><span></span>RiteTender@yandex.ru</a>
@@ -121,7 +107,7 @@
               <div class="tariff__wrap">
                 <p class="tariff__price">35 900<span> руб/мес</span>
               </p>
-                <button class="tariff__button button" data-order="Тариф «Стартовый»">Оформить заявку</button>
+                <button class="tariff__button button button--request" data-order="Тариф «Стартовый»">Оформить заявку</button>
               </div>
             </li>
             <li class="tariff__item">
@@ -143,7 +129,7 @@
               <div class="tariff__wrap">
                 <p class="tariff__price">9 900<span> руб/мес</span>
                 </p>
-                <button class="tariff__button button" data-order="Тариф «Базовый»">Оформить заявку</button>
+                <button class="tariff__button button button--request" data-order="Тариф «Базовый»">Оформить заявку</button>
               </div>
             </li>
             <li class="tariff__item">
@@ -165,7 +151,7 @@
               <div class="tariff__wrap">
                 <p class="tariff__price">34 900<span> руб/мес</span>
                 </p>
-                <button class="tariff__button button" data-order="Тариф «Расширенный»">Оформить заявку</button>
+                <button class="tariff__button button button--request" data-order="Тариф «Расширенный»">Оформить заявку</button>
               </div>
             </li>
             <li class="tariff__item">
@@ -187,7 +173,7 @@
               <div class="tariff__wrap">
                 <p class="tariff__price">19 900<span> руб/мес</span>
                 </p>
-                <button class="tariff__button button" data-order="Тариф «Стандартный">Оформить заявку</button>
+                <button class="tariff__button button button--request" data-order="Тариф «Стандартный">Оформить заявку</button>
               </div>
             </li>
             <li class="tariff__item">
@@ -209,7 +195,7 @@
               <div class="tariff__wrap">
                 <p class="tariff__price">49 900<span> руб/мес</span>
                 </p>
-                <button class="tariff__button button" data-order="Тариф «Стандартный">Оформить заявку</button>
+                <button class="tariff__button button button--request" data-order="Тариф «Стандартный">Оформить заявку</button>
               </div>
             </li>
             <li class="tariff__item">
@@ -231,7 +217,7 @@
               <div class="tariff__wrap">
                 <p class="tariff__price">4 900<span> руб/мес</span>
                 </p>
-                <button class="tariff__button button" data-order="Поиск закупок">Оформить заявку</button>
+                <button class="tariff__button button button--request" data-order="Поиск закупок">Оформить заявку</button>
               </div>
             </li>
           </ul>
@@ -309,9 +295,12 @@
             </li>
 
           </ul>
+          <button class="services__button button button--request" data-order="Разовые услуги">Оформить заявку</button>
+
           <div class="services__image">
-            <img src="img/services.jpg" alt="" >
+            <img src="img/services.jpg" alt="">
           </div>
+
         </div>
       </section>
       <section id="about-us" class="page-main__about-us about-us">
@@ -332,13 +321,13 @@
           </ul>
         </div>
       </section>
-      <section class="page-main__reviews-1 reviews-1">
-        <div class="reviews-1__container container">
+      <section class="page-main__reviews reviews">
+        <div class="reviews__container container">
 
-          <h2 class="reviews-1__title">Отзывы клиентов</h2>
+          <h2 class="reviews__title">Отзывы клиентов</h2>
 
             <div class="swiper">
-              <div class="reviews-1__wrapper review swiper-wrapper">
+              <div class="reviews__wrapper review swiper-wrapper">
                 <div class="review__wrap swiper-slide">
 
                     <!-- <img class="review__img" src="img/elvira.png" alt="Аватар пользователя"> -->
@@ -478,26 +467,6 @@
           </div>
         </div>
       </section>
-      <!-- <section class="page-main__reviews reviews">
-        <div class="reviews__container container">
-          <h2 class="reviews__title">Отзывы клиентов</h2>
-
-          <ul class="page-main__list reviews__list">
-            <li class="reviews__item">
-              <img src="img/review.jpg" alt="">
-
-            </li>
-            <li class="reviews__item">
-              <img src="img/review.jpg" alt="">
-
-            </li>
-            <li class="reviews__item">
-              <img src="img/review.jpg" alt="">
-
-            </li>
-          </ul>
-        </div>
-      </section> -->
     </main>
 
     <div class="modal modal--request">
@@ -574,7 +543,7 @@
             <li class="page-footer__item page-footer__item--mail">
               <a class="page-footer__link" href="mailto:RiteTender@yandex.ru">RiteTender@yandex.ru</a>
             </li>
-            <li class="page-footer__item page-footer__item--phone"><a class="page-footer__link" href="tel:+79278425940">+7(927)-842-59-40</a>
+            <li class="page-footer__item page-footer__item--phone"><a class="page-footer__link" href="tel:+79379414500">+7 (937)-941-45-00</a>
             </li>
             <li class="page-footer__item page-footer__item--inn">ИНН 212807019245</a>
             </li>
