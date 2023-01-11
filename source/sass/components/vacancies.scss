@@ -1,0 +1,47 @@
+.vacancies__container {
+  padding: 35px 10px 90px;
+  margin-bottom: 5px;
+  box-shadow: 0 0 10px $box-shadow-color;
+
+
+  @media (min-width: $tablet-width) {
+    padding: 35px 30px 90px;
+  }
+
+  @media (min-width: $laptop-width) {
+    padding: 35px 50px 90px;
+  }
+}
+
+.vacancies__title {
+  margin-bottom: 20px;
+}
+
+.vacancies__name {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.vacancies__desc {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.vacancies__list {
+  margin-bottom: 20px;
+  padding-left: 30px;
+}
+
+.vacancies__item {
+
+  list-style-type: disc;
+}
+
+.vacancies__slogan {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.vacancies__link {
+  font-weight: 700;
+}

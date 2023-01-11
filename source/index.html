@@ -4,15 +4,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link rel="icon" href="favicon.ico"> -->
-  <!-- <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml"> -->
-  <!-- <link rel="apple-touch-icon" href="img/favicons/apple-icon.png">
-  <link rel="manifest" href="manifest.webmanifest"> -->
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
   <link rel="preload" href="fonts/Montserrat.woff" as="font">
   <link rel="preload" href="fonts/Montserratbold.woff" as="font">
+  <link rel="preload" href="fonts/CormorantSC-Medium.woff" as="font">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500&display=swap" rel="stylesheet"> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.css">
 
@@ -64,6 +67,9 @@
             <li class="main-nav__item">
               <a class="main-nav__link" href="#services"><span></span>Разовые услуги</a>
             </li>
+            <!-- <li class="main-nav__item">
+              <a class="main-nav__link" href="#services"><span></span>Вакансии</a>
+            </li> -->
           </ul>
           <ul class="main-nav__contacts">
             <li>
@@ -467,6 +473,75 @@
           </div>
         </div>
       </section>
+      <section id="vacancies" class="page-main__vacancies vacancies">
+        <div class="vacancies__container container">
+          <div class="vacancies__wrapper">
+          <h2 class="vacancies__title">Вакансии</h2>
+          <h3 class="vacancies__name">Специалист по тендерам</h3>
+          <h4 class="vacancies__desc">Требования:</h4>
+          <ul class="page-main__list vacancies__list">
+            <li class="vacancies__item">
+              Высшее образование (желательно юридическое);
+            </li>
+            <li class="vacancies__item">
+              Умение работать на электронных площадках
+            </li>
+            <li class="vacancies__item">
+              Знание 44-ФЗ; 223-ФЗ (желательно);
+
+            </li>
+            <li class="vacancies__item">
+              Знание особенностей заполнения заявок на поставку товара (оказание услуг, выполнение работ) — конкретные показатели
+            </li>
+            <li class="vacancies__item">
+              Опыт аналогичной работы от 2-х лет.
+            </li>
+          </ul>
+
+          <h4 class="vacancies__desc">Должностные обязанности:</h4>
+          <ul class="page-main__list vacancies__list">
+            <li class="vacancies__item">
+              Поиск и анализ тендеров по видам деятельности;
+            </li>
+            <li class="vacancies__item">
+              Анализ целесообразности участия в тендерах;
+            </li>
+            <li class="vacancies__item">
+              Анализ заказчика, участников размещения заказа;
+            </li>
+            <li class="vacancies__item">
+              Планирование по участию в тендерах;
+            </li>
+            <li class="vacancies__item">
+              Получение ЭЦП, аккредитация на ЭТП;
+            </li>
+            <li class="vacancies__item">
+              Подготовка заявок на участие в тендерах и электронных торгах;
+            </li>
+            <li class="vacancies__item">
+              Сопровождение на всех этапах участия;
+            </li>
+          </ul>
+
+          <h4 class="vacancies__desc">Условия:</h4>
+          <ul class="page-main__list vacancies__list">
+            <li class="vacancies__item">
+              График работы 5/2, 10.00-19.00;
+            </li>
+            <li class="vacancies__item">
+              Заработная плата по результатам собеседования;
+            </li>
+            <li class="vacancies__item">
+              Анализ заказчика, участников размещения заказа;
+            </li>
+          </ul>
+          <p class="vacancies__slogan">Приглашаем на работу.</p>
+          <p class="vacancies__slogan">Если вы амбициозны, нацелены на успех и, так же, как и мы, стремитесь к новым горизонтам и новым свершениям –
+          присоединяйтесь!</p>
+          <p>Ждём резюме по адресу: <a class="vacancies__link" href="mailto:RiteTender@yandex.ru">RiteTender@yandex.ru</a></p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <div class="modal modal--request">
@@ -537,6 +612,21 @@
             © ritetender.ru, 2022
           </li>
         </ul>
+
+        <ul class="page-footer__list page-footer__list--info">
+          <li class="page-footer__item">
+            <a class="page-footer__link" href="#about-us">О нас</a>
+          </li>
+          <li class="page-footer__item">
+            <a class="page-footer__link" href="#tarif">Тарифы</a>
+          </li>
+          <li class="page-footer__item">
+            <a class="page-footer__link" href="#services"><span></span>Разовые услуги</a>
+          </li>
+          <li class="page-footer__item">
+            <a class="page-footer__link" href="#services"><span></span>Вакансии</a>
+          </li>
+        </ul>
         <div class="page-footer__contacts">
           <h2 class="page-footer__title">Контакты для сотрудничества:</h2>
           <ul class="page-footer__list">
@@ -548,6 +638,7 @@
             <li class="page-footer__item page-footer__item--inn">ИНН 212807019245</a>
             </li>
           </ul>
+
         </div>
       </div>
     </footer>

@@ -1,5 +1,5 @@
 .page-footer {
-  background-color: $white;
+  background-color: $bg-color;
 }
 
 .page-footer__container {
@@ -14,6 +14,8 @@
   }
 
   @media (min-width: $laptop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
     padding: 35px 30px 30px;
   }
 }
@@ -41,6 +43,7 @@
   flex-direction: column;
   align-items: start;
 
+
   &--site {
     @media (min-width: $tablet-width) {
       grid-area: 2 / 1 / 3 / 2;
@@ -48,9 +51,13 @@
   }
 }
 
+.page-footer__list--info .page-footer__item {
+  padding-left: 0;
+}
+
 .page-footer__contacts {
   @media (min-width: $tablet-width) {
-    grid-area: 1 / 2 / 3 / 3;
+    grid-area: 1 / 3 / 3 / 3;
     justify-self: end;
   }
 }
@@ -63,6 +70,11 @@
 
   &--site {
     padding-left: 0;
+  }
+
+  &--phone {
+    font-size: 18px;
+    font-weight: 700;
   }
 
   &::before {

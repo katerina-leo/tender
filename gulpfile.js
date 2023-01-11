@@ -94,9 +94,9 @@ return gulp.src('source/img/icons/*.svg')
 const copy = (done) => {
   gulp.src([
     'source/fonts/*.{woff2,woff}',
-    // 'source/*.ico',
-    // 'source/img/favicons/*.{png,svg}',
-    // 'source/manifest.webmanifest',
+    'source/*.ico',
+    'source/img/favicons/*.{png,svg}',
+    'source/manifest.webmanifest',
     // 'source/robots.txt',
     // 'source/sitemap.xml',
     'source/dist/css/*.css',
