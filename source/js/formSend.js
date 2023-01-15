@@ -6,6 +6,7 @@ export const formSend = async (evt) => {
     evt.preventDefault();
 
     const formData = new FormData(form);
+
     if (form.checkValidity()) {
       modalBody.classList.add('modal__body--sending')
 
