@@ -70,7 +70,7 @@ const init = () => {
     }
   })
 
-form.addEventListener('submit', formSend);
+  form.addEventListener('submit', formSend);
 }
 
 init();

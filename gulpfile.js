@@ -16,21 +16,21 @@ import IMask from 'imask';
 
 // Styles
 
-export const styles = () => { // Название задачи для дальнейшего обращения к ней.
-  return gulp.src('source/sass/style.scss') // Нахождение необходимых файлов, над которыми будет производится работа.
-    .pipe(plumber()) //  Здесь происходит непосредственно сама работа. В данном случае мы обрабатываем ошибки, затем превращаем Sass-файлы в CSS-файлы и в конце добавляем префиксы.
+export const styles = () => {
+  return gulp.src('source/sass/style.scss')
+    .pipe(plumber())
     .pipe(sass())
     .pipe(postcss([
       autoprefixer(),
       csso()
     ]))
-    .pipe(gulp.dest('build/css')) //  Перенос итогового результата, CSS-файл с префиксами, в необходимую папку `source/css`.
+    .pipe(gulp.dest('build/css'))
     .pipe(browser.stream());
 }
 
 const html = () => {
   return gulp.src('source/*.html')
-  .pipe(htmlmin({ collapseWhitespace: true }))
+  // .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest('build'));
 }
 //Scripts
@@ -141,7 +141,7 @@ const reload = (done) => {
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/js/*.js', gulp.series(scripts));
-  // gulp.watch('source/dist/js/lightbox-plus-jquery.js', gulp.series(scripts));
+
   gulp.watch('source/*.html', gulp.series(html, reload));
 }
 

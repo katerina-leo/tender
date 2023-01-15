@@ -1,72 +1,120 @@
 .form {
   &__fieldset {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 16px 12px;
+    margin-bottom: 46px;
+  }
 
-    &--user {
-      margin-bottom: 46px;
-    }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5px 12px;
   }
 
   &__label {
-    flex: 1 1 310px;
-  }
-
-  &__text {
-    display: block;
+    display: inline-block;
     font-size: 16px;
-    margin-bottom: 4px;
-
-    &--checkbox {
-      display: inline;
-    }
+    margin-bottom: 10px;
   }
 
   &__input {
+    // -webkit-appearance: none;
+    // -moz-appearance: none;
+    appearance: none;
+    display: block;
     width: 100%;
     height: 46px;
     background-color: $white;
     border-radius: 8px;
-    border: none;
+    border: 1px solid #dce1e6;
     padding: 10px 14px;
     font-weight: 300;
     color: $black;
     outline: none;
-
-    &--checkbox {
-      width: 20px;
-      height: 20px;
-    }
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
     &:focus {
       box-shadow: 0 0 10px rgba(174, 174, 182, 0.5);
     }
-
-    &--error {
-      box-shadow: 0 0 10px $error;
-    }
   }
 
-  &__wrapper-btn {
-    min-height: 60px;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-  }
-
-  &__submit {
-
-    display: block;
-    padding: 10px 20px;
-    font-weight: 400;
-    background-color: #ffd600;
+  &__input--checkbox {
+    // -webkit-appearance: none;
+    // -moz-appearance: none;
+    // appearance: none;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    // background-color: $white;
     border-radius: 4px;
-    color: $font-color;
-    font-size: 16px;
+    // border: 1px solid #dce1e6;
+    display: block;
 
-    &--request {
-      align-self: flex-end;
-    }
+
+    // &:focus {
+    //     box-shadow: 0 0 10px rgba(174, 174, 182, 0.5);
+    //   }
   }
+}
+
+.form__input--checkbox:checked {
+  background-color: $green;
+  border-color: $green;
+  background-image: url("../img/done.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+
+.form__valid-feedback {
+  display: none;
+  width: 100%;
+  font-size: 12px;
+  color: $green;
+}
+
+.form__invalid-feedback {
+  display: none;
+  width: 100%;
+  font-size: 12px;
+  color: $error;
+}
+
+.form--validated :valid ~ .form__invalid-feedback {
+  display: block;
+}
+
+.form--validated :invalid ~ .form__invalid-feedback {
+  display: block;
+}
+
+
+.form--validated .form__input:valid {
+  border-color: $green;
+}
+
+.form--validated .form__input:invalid {
+  border-color: $error;
+}
+
+.form__wrapper-btn {
+  min-height: 60px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.form__submit {
+  display: block;
+  padding: 10px 20px;
+  font-weight: 400;
+  background-color: #ffd600;
+  border-radius: 4px;
+  color: $font-color;
+  font-size: 16px;
+  align-self: flex-end;
 }
