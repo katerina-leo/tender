@@ -3,6 +3,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 15px;
+  padding-left: 0;
 
   @media (min-width: $mobile-width-only) {
     grid-template-columns: 1fr 1fr 1fr;
