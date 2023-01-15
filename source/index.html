@@ -81,8 +81,8 @@
             <li class="tariff__item" >
               <h3 class="tariff__item-title">Тариф «Стартовый»</h3>
               <p class="tariff__desc">Для новых клиентов, цена 35 900р за 2-а месяца. Без ограничений процедур, без дополнительных комиссий за выигранный контракт</p>
-              <p><strong>В тарифы включены следующие услуги:</strong></p>
-              <ul class="tariff__items desc-list">
+              <strong>В тарифы включены следующие услуги:</strong></p>
+              <ul>
                 <li> Комплексное тендерное сопровождение «под ключ»</li>
                 <li>Помощь в получении ЭЦП</li>
                 <li>Настройка вашего ПК для работы с ЭЦП</li>
@@ -102,9 +102,9 @@
             </li>
             <li class="tariff__item">
               <h3 class="tariff__item-title">Тариф «Базовый»</h3>
-              <p class="tariff__desc">5 заявок</p>
+              <p>5 заявок</p>
               <p><strong>В тарифы включены следующие услуги:</strong></p>
-              <ul class="tariff__items desc-list">
+              <ul>
                 <li> Комплексное тендерное сопровождение «под ключ»</li>
                 <li>Помощь в получении ЭЦП</li>
                 <li>Настройка вашего ПК для работы с ЭЦП</li>
@@ -124,9 +124,9 @@
             </li>
             <li class="tariff__item">
               <h3 class="tariff__item-title" >Тариф «Расширенный»</h3>
-              <p class="tariff__desc">1 месяц, + 0,5% от цены выигранных контрактов (без ограничений по количеству процедур)</p>
+              <p>1 месяц, + 0,5% от цены выигранных контрактов (без ограничений по количеству процедур)</p>
               <p><strong>В тарифы включены следующие услуги:</strong></p>
-              <ul class="tariff__items desc-list">
+              <ul>
                 <li> Комплексное тендерное сопровождение «под ключ»</li>
                 <li>Помощь в получении ЭЦП</li>
                 <li>Настройка вашего ПК для работы с ЭЦП</li>
@@ -146,9 +146,9 @@
             </li>
             <li class="tariff__item">
               <h3 class="tariff__item-title">Тариф «Стандартный</h3>
-              <p class="tariff__desc">1 месяц, + 0,5% от цены выигранных контрактов (15 процедур)</p>
+              <p>1 месяц, + 0,5% от цены выигранных контрактов (15 процедур)</p>
               <p><strong>В тарифы включены следующие услуги:</strong></p>
-              <ul class="tariff__items desc-list">
+              <ul>
                 <li> Комплексное тендерное сопровождение «под ключ»</li>
                 <li>Помощь в получении ЭЦП</li>
                 <li>Настройка вашего ПК для работы с ЭЦП</li>
@@ -168,9 +168,9 @@
             </li>
             <li class="tariff__item">
               <h3 class="tariff__item-title">Тариф «Свободный»</h3>
-              <p class="tariff__desc">без ограничений процедур, без дополнительных комиссий за выигранный контракт</p>
+              <p>Без ограничений процедур, без дополнительных комиссий за выигранный контракт</p>
               <p><strong>В тарифы включены следующие услуги:</strong></p>
-              <ul class="tariff__items desc-list">
+              <ul>
                 <li> Комплексное тендерное сопровождение «под ключ»</li>
                 <li>Помощь в получении ЭЦП</li>
                 <li>Настройка вашего ПК для работы с ЭЦП</li>
@@ -190,9 +190,9 @@
             </li>
             <li class="tariff__item">
               <h3 class="tariff__item-title">Поиск закупок</h3>
-              <p class="tariff__desc">3 раза в неделю</p>
+              <p>3 раза в неделю</p>
               <p><strong>В тарифы включены следующие услуги:</strong></p>
-              <ul class="tariff__items desc-list">
+              <ul>
                 <li> Комплексное тендерное сопровождение «под ключ»</li>
                 <li>Помощь в получении ЭЦП</li>
                 <li>Настройка вашего ПК для работы с ЭЦП</li>
@@ -517,7 +517,7 @@
 
           </fieldset>
 
-
+          <input class="modal__order" type="hidden" name="order">
 
           <div class="form__wrapper-btn">
 
@@ -537,43 +537,6 @@
         </button>
       </div>
     </div>
-
-    <!-- <div class="modal modal--request">
-      <div class="modal__body">
-
-          <h3 class="modal__title">Оформить заявку</h3>
-          <form action="" class="form form--request" id="form" method="post">
-            <fieldset class="form__fieldset form__fieldset--user">
-              <label class="form__label">
-                <span class="form__text">Имя*</span>
-                <input class="form__input form__input--req" name="name" type="text" >
-              </label>
-              <label class="form__label">
-                <span class="form__text">Телефон*</span>
-                <input class="form__input form__input--req form__input--phone" name="phone" type="text" placeholder="+7 (___) ___-__-__" >
-              </label>
-              <label class="form__label">
-                <span class="form__text">Адрес электронной почты</span>
-                <input class="form__input form__input--email" name="email" type="email">
-              </label>
-              <label class="form__label form__label--checkbox">
-
-                <input class="form__input form__input--checkbox form__input--req" name="agreement" type="checkbox" checked>
-                <span class="form__text form__text--checkbox">Я даю согласие на обработку персональных данных</span>
-              </label>
-
-            </fieldset>
-
-            <input class="modal__order" type="hidden" name="order">
-
-            <div class="form__wrapper-btn">
-
-              <button class="form__submit form__submit--sign-up" type="submit">
-                Отправить заявку
-              </button>
-            </div>
-          </form>
-
           <!-- Сообщение об успешном отправлении -->
           <template id="success">
             <div class="success">
@@ -597,7 +560,7 @@
           </svg>
         </button>
       </div>
-    </div> -->
+    </div>
     <footer class="page-footer">
       <div class="page-footer__container container">
         <a class="page-footer__logo" href="index.html">
