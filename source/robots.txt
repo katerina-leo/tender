@@ -1,4 +1,0 @@
-User-agent: *
-
-Host: https://ritetender.ru
-Sitemap: https://ritetender.ru/sitemap.xml
